@@ -8,7 +8,7 @@ public class Uppgift_1
         {
             if (nummer[i] == SöktVärde)
             {
-                System.out.printf("Nummer " + nummer[i] + " finns på raden " +(i+1));
+                System.out.printf("Nummer " + nummer[i] + " finns på raden " +i+1);
                 break;
             }
         }
