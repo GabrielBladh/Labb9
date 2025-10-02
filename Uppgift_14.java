@@ -33,18 +33,18 @@ public class Uppgift_14
         }
         while (true)
         {
-        System.out.println("Skriv ut vart du vill att din gubbe ska vara i position X, mellan 1-5");
+        System.out.println("Skriv ut vart du vill att din gubbe ska vara i position X, mellan 0-4");
         SpelarePosX = scan.nextInt();
-        System.out.println("Skriv ut vart du vill att din gubbe ska vara i position y, mellan 1-4");
+        System.out.println("Skriv ut vart du vill att din gubbe ska vara i position y, mellan 0-3");
         SpelarePosY = scan.nextInt();
-        if (SpelarePosX >= 1 && SpelarePosX <= 5 && SpelarePosY >= 1 && SpelarePosY <= 4)
+        if (SpelarePosX >= 0 && SpelarePosX <= 4 && SpelarePosY >= 0 && SpelarePosY <= 3)
         {
             if (Spelplan[SpelarePosX][SpelarePosY] == 3)
             {
                 System.out.println("Du har satt dig på en farlig position, du dog");
                 break;
             }
-            else if (Spelplan[SpelarePosX+1][SpelarePosY] + Spelplan[SpelarePosX-1][SpelarePosY] + Spelplan[SpelarePosX][SpelarePosY+1] + Spelplan[SpelarePosX][SpelarePosY-1] == 15)
+            else if (Spelplan[SpelarePosX+1][SpelarePosY] + Spelplan[SpelarePosX-1][SpelarePosY] + Spelplan[SpelarePosX][SpelarePosY+1] + Spelplan[SpelarePosX][SpelarePosY-1] >= 15)
             {
                 System.out.println("Du har satt dig på en farlig position, du dog");
                 break;
